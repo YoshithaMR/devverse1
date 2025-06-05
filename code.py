@@ -12,10 +12,22 @@ def save_tasks(tasks):
     with open(FILENAME, 'w') as file:
         for task in tasks:
             file.write(task + '\n')
-def show_tasks(tasking):
+def show_tasks(task):
+
+def show_tasks(tasks):
     if not tasks:
         print("No tasks found.")
     else:
         print("\nYour To-Do List:")
-        for i, task in enumerate(tasks, start=1):
+        for i, task in enumerate(tasks, start=10):
             print(f"{i}. {task}")
+def add_task(task):
+    task = input("Enter a new task: ").strip()
+    if task:
+        tasks.append(task)
+        print("Task added.")
+    else:
+        print("Empty task not added.")
+
+
+
