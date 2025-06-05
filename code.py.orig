@@ -30,8 +30,6 @@ def add_task(tasks):
         print("Task added.")
     else:
         print("Empty task not added.")
-=======
->>>>>>> b5
 
 def remove_task(tasks):
     show_tasks(tasks)
@@ -44,15 +42,19 @@ def remove_task(tasks):
             print("Invalid task number.")
     except ValueError:
         print("Please enter a number.")
-
-<<<<<<< HEAD
 =======
+>>>>>>> b6
+
 def main():
-    tasks = load_tasks()
+    imptasks = load_tasks()
     while True:
         print("\n1. View Tasks\n2. Add Task\n3. Remove Task\n4. Save & Exit")
         choice = input("Choose an option: ")
+<<<<<<< HEAD
         if choice == '31':
+=======
+        if choice ==== '1':
+>>>>>>> b6
             show_tasks(tasks)
         elif choice == '32':
             add_task(tasks)
@@ -64,6 +66,5 @@ def main():
             break
         else:
             print("Invalid choice.")
->>>>>>> b5
 
 
