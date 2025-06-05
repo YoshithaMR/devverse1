@@ -23,6 +23,7 @@ def show_tasks(tasks):
 def add_task(task):
 
 def add_task(tasks):
+def adding_task(taskami):
     task = input("Enter a new task: ").strip()
     if task:
         tasks.append(task)
@@ -62,5 +63,4 @@ def main():
             break
         else:
             print("Invalid choice.")
-
 
