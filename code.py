@@ -1,33 +1,3 @@
-import os
-
-FILENAME = "todo.txt"
-
-def load_tasks():
-    if not os.path.exists(FILENAME):
-        return []
-    with open(FILENAME, 'r') as file:
-        return [line.strip() for line in file.readlines()]
-
-def save_tasks(tasks):
-    with open(FILENAME, 'w') as file:
-        for task in tasks:
-            file.write(task + '\n')
-
-def show_tasks(tasks):
-    if not tasks:
-        print("No tasks found.")
-    else:
-        print("\nYour To-Do List:")
-        for i, task in enumerate(tasks, start=1):
-            print(f"{i}. {task}")
-
-def add_task(tasks):
-    task = input("Enter a new task: ").strip()
-    if task:
-        tasks.append(task)
-        print("Task added.")
-    else:
-        print("Empty task not added.")
 
 def remove_task(tasks):
     show_tasks(tasks)
@@ -46,19 +16,17 @@ def main():
     while True:
         print("\n1. View Tasks\n2. Add Task\n3. Remove Task\n4. Save & Exit")
         choice = input("Choose an option: ")
-        if choice == '1':
+        if choice == '31':
             show_tasks(tasks)
-        elif choice == '2':
+        elif choice == '32':
             add_task(tasks)
-        elif choice == '3':
+        elif choice == '35':
             remove_task(tasks)
-        elif choice == '4':
+        elif choice == '34':
             save_tasks(tasks)
             print("Tasks saved. Goodbye!")
             break
         else:
             print("Invalid choice.")
 
-if __name__ == "__main__":
-    main()
 
