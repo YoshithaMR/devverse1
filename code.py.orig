@@ -1,5 +1,5 @@
 
-
+<<<<<<< HEAD
 FILENAME = "todo.txt"
 
 def load_tasks():
@@ -12,6 +12,7 @@ def save_tasks(tasks):
     with open(FILENAME, 'w') as file:
         for task in tasks:
             file.write(task + '\n')
+=======
 def show_tasks(tasking):
     if not tasks:
         print("No tasks found.")
@@ -19,3 +20,6 @@ def show_tasks(tasking):
         print("\nYour To-Do List:")
         for i, task in enumerate(tasks, start=1):
             print(f"{i}. {task}")
+
+>>>>>>> b2
+
