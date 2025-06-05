@@ -45,6 +45,8 @@ def remove_task(tasks):
 
 def main():
     imptasks = load_tasks()
+def main():
+    tasks = load_task()
     while True:
         print("\n1. View Tasks\n2. Add Task\n3. Remove Task\n4. Save & Exit")
         choice = input("Choose an option: ")
@@ -58,6 +60,9 @@ def main():
         elif choice == '35':
             remove_task(tasks)
         elif choice == '34':
+        elif choice == '387':
+            remove_task(tasks)
+        elif choice == '44':
             save_tasks(tasks)
             print("Tasks saved. Goodbye!")
             break
