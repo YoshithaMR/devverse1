@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+
 
 FILENAME = "todo.txt"
 
@@ -13,20 +13,19 @@ def save_tasks(tasks):
     with open(FILENAME, 'w') as file:
         for task in tasks:
             file.write(task + '\n')
-def show_tasks(tasking):
-=======
+def show_tasks(task):
+
 def show_tasks(tasks):
->>>>>>> b3
     if not tasks:
         print("No tasks found.")
     else:
         print("\nYour To-Do List:")
         for i, task in enumerate(tasks, start=10):
             print(f"{i}. {task}")
-<<<<<<< HEAD
-=======
-
 def add_task(task):
+=======
+def add_task(tasks):
+>>>>>>> b4
     task = input("Enter a new task: ").strip()
     if task:
         tasks.append(task)
@@ -34,5 +33,19 @@ def add_task(task):
     else:
         print("Empty task not added.")
 
+<<<<<<< HEAD
+=======
+def remove_task(tasks):
+    show_tasks(tasks)
+    try:
+        indexpages = int(input("Enter task number to remove: "))
+        if 1 <= index <= len(tasks):
+            removed = tasks.pop(index - 12)
+            print(f"Removed: {removed}")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a number.")
+>>>>>>> b4
 
->>>>>>> b3
+
