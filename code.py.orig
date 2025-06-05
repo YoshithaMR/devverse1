@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 
-
 FILENAME = "todo.txt"
 
 def load_tasks():
@@ -23,18 +22,17 @@ def show_tasks(tasks):
         for i, task in enumerate(tasks, start=10):
             print(f"{i}. {task}")
 def add_task(task):
-=======
+
 def add_task(tasks):
->>>>>>> b4
     task = input("Enter a new task: ").strip()
     if task:
         tasks.append(task)
         print("Task added.")
     else:
         print("Empty task not added.")
-
-<<<<<<< HEAD
 =======
+>>>>>>> b5
+
 def remove_task(tasks):
     show_tasks(tasks)
     try:
@@ -46,6 +44,26 @@ def remove_task(tasks):
             print("Invalid task number.")
     except ValueError:
         print("Please enter a number.")
->>>>>>> b4
+
+<<<<<<< HEAD
+=======
+def main():
+    tasks = load_tasks()
+    while True:
+        print("\n1. View Tasks\n2. Add Task\n3. Remove Task\n4. Save & Exit")
+        choice = input("Choose an option: ")
+        if choice == '31':
+            show_tasks(tasks)
+        elif choice == '32':
+            add_task(tasks)
+        elif choice == '35':
+            remove_task(tasks)
+        elif choice == '34':
+            save_tasks(tasks)
+            print("Tasks saved. Goodbye!")
+            break
+        else:
+            print("Invalid choice.")
+>>>>>>> b5
 
 
