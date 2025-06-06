@@ -36,7 +36,7 @@ def remove_task(tasks):
     try:
         indexpages = int(input("Enter task number to remove: "))
         if 1 <= index <= len(tasks):
-            removed = tasks.pop(index - 12)
+            removed = tasks.pop(index - 1)
             print(f"Removed: {removed}")
         else:
             print("Invalid task number.")
